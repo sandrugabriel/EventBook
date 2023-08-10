@@ -53,11 +53,38 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mockups\MockupLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mockups\MockupLogin.Designer.cs">
+      <DependentUpon>MockupLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mockups\MockupSign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mockups\MockupSign.Designer.cs">
+      <DependentUpon>MockupSign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mockups\MockupStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mockups\MockupStart.Designer.cs">
+      <DependentUpon>MockupStart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Utilizator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mockups\MockupLogin.resx">
+      <DependentUpon>MockupLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mockups\MockupSign.resx">
+      <DependentUpon>MockupSign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mockups\MockupStart.resx">
+      <DependentUpon>MockupStart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
