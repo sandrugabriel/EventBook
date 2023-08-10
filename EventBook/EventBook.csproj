@@ -53,6 +53,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mockups\MockupAfisare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mockups\MockupAfisare.Designer.cs">
+      <DependentUpon>MockupAfisare.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mockups\MockupLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
       <DependentUpon>MockupStart.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Utilizator.cs" />
+    <Compile Include="Panels\PnlAfisare.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Panels\PnlLogin.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -85,6 +94,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mockups\MockupAfisare.resx">
+      <DependentUpon>MockupAfisare.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mockups\MockupLogin.resx">
       <DependentUpon>MockupLogin.cs</DependentUpon>
