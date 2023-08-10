@@ -1,8 +1,10 @@
-﻿using EventBook.Models;
+﻿using EventBook.Controllers;
+using EventBook.Models;
 using EventBook.Models.Mostenirea;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +25,15 @@ namespace EventBook.Panels
         private System.Windows.Forms.Label lblType1;
         private System.Windows.Forms.Button btnDelete;
 
+        ControllerEventuri controllerEventuri;
+
         public PnlCard(Form1 form1, Utilizator utilizator1, Event _event1) {
         
             this.form = form1;
             this.utilizator = utilizator1;
             this._event = _event1;
+
+            this.controllerEventuri = new ControllerEventuri();
 
             // MockupCard
             this.Size = new System.Drawing.Size(319, 303);
@@ -85,9 +91,22 @@ namespace EventBook.Panels
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(128, 49);
             this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new EventHandler(btnDelete_Click); 
+            this.btnDelete.BackColor = System.Drawing.ColorTranslator.FromHtml("#3A4F50"); 
+            this.btnDelete.ForeColor = System.Drawing.ColorTranslator.FromHtml("#F4FEFD");
+
+
 
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            controllerEventuri.delete(_event.Id);
+
+            form.removepnl("PnlAfisare");
+            form.Controls.Add(new PnlAfisare(form,utilizator));
+        }
 
 
     }
