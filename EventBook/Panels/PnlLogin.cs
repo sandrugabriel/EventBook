@@ -177,7 +177,8 @@ namespace EventBook.Panels
                 Utilizator utilizator = controllerUtilizatori.utilizatorByNume(txtPass.Text,txtName.Text);
 
                 this.form.removepnl("PnlLogin");
-
+                this.form.Controls.Add(new PnlMeniu(form, utilizator));
+                this.form.Controls.Add(new PnlAfisare(form, utilizator));
             }
 
 

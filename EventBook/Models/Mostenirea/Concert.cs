@@ -38,5 +38,10 @@ namespace EventBook.Models.Mostenirea
             t += nrArtistilor.ToString() + "," + name;
             return t;
         }
+
+        public override string getName()
+        {
+            return name;
+        }
     }
 }

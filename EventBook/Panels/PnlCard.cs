@@ -1,4 +1,5 @@
 ﻿using EventBook.Models;
+using EventBook.Models.Mostenirea;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ namespace EventBook.Panels
 
         Form1 form;
         Utilizator utilizator;
+        Event _event;
 
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Label lblName;
@@ -21,16 +23,18 @@ namespace EventBook.Panels
         private System.Windows.Forms.Label lblType1;
         private System.Windows.Forms.Button btnDelete;
 
-        public PnlCard(Form1 form1, Utilizator utilizator1) {
+        public PnlCard(Form1 form1, Utilizator utilizator1, Event _event1) {
         
             this.form = form1;
             this.utilizator = utilizator1;
+            this._event = _event1;
 
             // MockupCard
             this.Size = new System.Drawing.Size(319, 303);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular);
-            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "PnlCard";
+            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#F4FEFD");
+
 
             this.lblType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -66,7 +70,7 @@ namespace EventBook.Panels
             this.lblName1.Location = new System.Drawing.Point(74, 168);
             this.lblName1.Name = "lblName1";
             this.lblName1.Size = new System.Drawing.Size(76, 30);
-            this.lblName1.Text = "Name";
+            this.lblName1.Text = _event.getName();
              
             // lblType1
             this.lblType1.AutoSize = true;
@@ -74,7 +78,7 @@ namespace EventBook.Panels
             this.lblType1.Location = new System.Drawing.Point(74, 64);
             this.lblType1.Name = "lblType1";
             this.lblType1.Size = new System.Drawing.Size(76, 30);
-            this.lblType1.Text = "Name";
+            this.lblType1.Text = _event.Type;
              
             // btnDelete
             this.btnDelete.Location = new System.Drawing.Point(79, 225);

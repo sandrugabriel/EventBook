@@ -26,7 +26,7 @@ namespace EventBook.Controllers
         public void load()
         {
 
-            string path = Application.StartupPath;
+            string path = Application.StartupPath + @"/data/eventuri.txt";
 
             StreamReader streamReader = new StreamReader(path);
 
@@ -40,7 +40,7 @@ namespace EventBook.Controllers
                     case "spectacol":
                         eventuri.Add(new Spectacol(t));
                         break;
-                    case "coferinte":
+                    case "coferinta":
                         eventuri.Add(new Conferinte(t));
                         break;
                     case "concert":

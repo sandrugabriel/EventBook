@@ -38,5 +38,11 @@ namespace EventBook.Models.Mostenirea
             t += name + "," + durata.ToString();
             return t;
         }
+
+        public override string getName()
+        {
+            return name;
+        }
+
     }
 }

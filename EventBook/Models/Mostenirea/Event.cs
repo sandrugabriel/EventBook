@@ -42,5 +42,10 @@ namespace EventBook.Models.Mostenirea
         {
             return type + "," + id.ToString() + "," + dataStart.ToString() + ",";
         }
+
+        public virtual string getName()
+        {
+            return type;
+        }
     }
 }

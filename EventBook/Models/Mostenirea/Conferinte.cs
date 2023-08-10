@@ -38,6 +38,9 @@ namespace EventBook.Models.Mostenirea
             t += privat.ToString() + "," + name;
             return t;
         }
-
+        public override string getName()
+        {
+            return name;
+        }
     }
 }
