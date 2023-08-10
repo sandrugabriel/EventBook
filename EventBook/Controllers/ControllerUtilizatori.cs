@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace EventBook.Controllers
 {
@@ -91,25 +92,22 @@ namespace EventBook.Controllers
 
 
             return false;
-
-
-
         }
 
-        public int idByNume(string nume)
+        public Utilizator utilizatorByNume(string pass, string nume)
         {
 
             for (int i = 0; i < utilizatori.Count; i++)
             {
 
-                if (utilizatori[i].Name.Equals(nume))
+                if (utilizatori[i].Name.Equals(nume) && utilizatori[i].Password.Equals(pass))
                 {
-                    return utilizatori[i].Id;
+                    return utilizatori[i];
                 }
 
             }
 
-            return -1;
+            return null;
         }
 
         public Utilizator getClientById(int id)
@@ -134,7 +132,7 @@ namespace EventBook.Controllers
             while (this.getClientById(id) != null)
             {
 
-                id = random.Next();
+                id = random.Next(11,1000);
 
             }
 
