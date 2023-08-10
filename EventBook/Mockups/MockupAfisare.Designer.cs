@@ -28,42 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTitlu = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // panel1
+            // lblTitlu
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1341, 111);
-            this.panel1.TabIndex = 0;
+            this.lblTitlu.AutoSize = true;
+            this.lblTitlu.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 24.8F);
+            this.lblTitlu.Location = new System.Drawing.Point(524, 13);
+            this.lblTitlu.Name = "lblTitlu";
+            this.lblTitlu.Size = new System.Drawing.Size(208, 55);
+            this.lblTitlu.TabIndex = 0;
+            this.lblTitlu.Text = "Eventurile";
             // 
-            // panel2
+            // btnAdd
             // 
-            this.panel2.Location = new System.Drawing.Point(0, 112);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1341, 116);
-            this.panel2.TabIndex = 1;
+            this.btnAdd.Location = new System.Drawing.Point(1129, 8);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(164, 60);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Add event";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // MockupAfisare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1340, 779);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1323, 77);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.lblTitlu);
             this.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "MockupAfisare";
             this.Text = "MockupAfisare";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label lblTitlu;
     }
 }

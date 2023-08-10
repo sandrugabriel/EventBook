@@ -214,6 +214,9 @@ namespace EventBook.Panels
 
                 Utilizator utilizator = new Utilizator(textul);
 
+                this.form.removepnl("PnlSign");
+                this.form.Controls.Add(new PnlMeniu(form, utilizator));
+                this.form.Controls.Add(new PnlAfisare(form, utilizator));
 
             }
 
