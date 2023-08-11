@@ -51,10 +51,17 @@ namespace EventBook.Panels
             this.btnAdd.Text = "Add event";
             this.btnAdd.BackColor = System.Drawing.ColorTranslator.FromHtml("#0EF6CC");
             this.btnAdd.ForeColor = System.Drawing.ColorTranslator.FromHtml("#1B2223");
+            this.btnAdd.Click += new EventHandler(btnAdd_Click);
 
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
 
+            this.form.removepnl("PnlMeniu");
+            this.form.removepnl("PnlAfisare");
+            this.form.Controls.Add(new PnlAdd(form, utilizator));
+        }
 
     }
 }
