@@ -17,10 +17,11 @@ namespace EventBook
         public Form1()
         {
             InitializeComponent();
-
-            Utilizator utilizator = new Utilizator("0,gabi,gabi1234");
-            this.Controls.Add(new PnlMeniu(this,utilizator));
-            this.Controls.Add(new PnlAfisare(this, utilizator));
+            /*
+                        Utilizator utilizator = new Utilizator("0,gabi,gabi1234");
+                        this.Controls.Add(new PnlMeniu(this,utilizator));
+                        this.Controls.Add(new PnlAfisare(this, utilizator));*/
+            this.Controls.Add(new PnlStart(this));
         }
 
         public void removepnl(string pnl)

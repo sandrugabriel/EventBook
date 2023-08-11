@@ -54,6 +54,13 @@ namespace EventBook.Panels
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblType);
 
+            this.lblType1.Click += new EventHandler(view_Click); 
+            this.lblType.Click += new EventHandler(view_Click);
+            this.lblName.Click += new EventHandler(view_Click);
+            this.lblName1.Click += new EventHandler(view_Click);
+            this.Click += new EventHandler(view_Click);
+
+
             // lblType
             this.lblType.AutoSize = true;
             this.lblType.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 15.8F);
@@ -108,6 +115,11 @@ namespace EventBook.Panels
             form.Controls.Add(new PnlAfisare(form,utilizator));
         }
 
-
+        private void view_Click(object sender, EventArgs e)
+        {
+            form.removepnl("PnlMeniu");
+            form.removepnl("PnlAfisare");
+            form.Controls.Add(new PnlView(form, utilizator, _event));
+        }
     }
 }
