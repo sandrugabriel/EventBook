@@ -31,6 +31,7 @@ namespace EventBook.Panels
             this.form.Size = new System.Drawing.Size(1358, 826);
             this.form.MinimumSize = new System.Drawing.Size(1358, 826);
             this.form.MaximumSize = new System.Drawing.Size(1358, 826);
+            this.form.BackColor = System.Drawing.ColorTranslator.FromHtml("#1B2223");
 
             //PnlAfisare
             this.Size = new System.Drawing.Size(1358, 665);
